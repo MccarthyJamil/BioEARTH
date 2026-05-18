@@ -185,33 +185,36 @@ export default function SpecimenForm({ editTarget, onSuccess, onCancel }: Specim
         activity_period: form.activity_period || null,
       };
 
-      let result;
+      let result: Specimen | null = null;
 
       if (isEdit && editTarget) {
         // UPDATE
         const { data, error: dbError } = await supabase
           .from('specimens')
-          .update(payload)
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          .update(payload as any)
           .eq('id', editTarget.id)
           .select()
           .single();
 
         if (dbError) throw dbError;
-        result = data;
+        result = data as Specimen;
       } else {
         // INSERT
         const { data, error: dbError } = await supabase
           .from('specimens')
-          .insert(payload)
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          .insert(payload as any)
           .select()
           .single();
 
         if (dbError) throw dbError;
-        result = data;
+        result = data as Specimen;
       }
 
       setSuccess(true);
-      onSuccess?.(result as Specimen);
+      // result no puede ser null aquí: si dbError fue truthy, throw ya salió del bloque
+      onSuccess?.(result!);
 
       if (!isEdit) {
         setForm(EMPTY_FORM);

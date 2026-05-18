@@ -53,7 +53,8 @@ export interface Specimen {
 export type SpecimenInsert = Omit<Specimen, 'id' | 'created_at' | 'updated_at'>;
 export type SpecimenUpdate = Partial<SpecimenInsert>;
 
-// Definición mínima de Database para el cliente tipado de Supabase
+// Referencia del schema para uso interno (tipado manual de resultados).
+// No se usa como genérico en createClient — ver src/lib/supabaseClient.ts.
 export interface Database {
   public: {
     Tables: {
