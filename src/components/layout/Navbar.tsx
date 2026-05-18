@@ -52,10 +52,10 @@ export default function Navbar() {
               </div>
               <div className="hidden sm:block">
                 <span className="block text-[15px] font-bold text-earth-900 leading-none tracking-tight">
-                  BioEARTH
+                  Entomósfera
                 </span>
                 <span className="block text-[10px] text-earth-400 leading-none mt-0.5 font-medium uppercase tracking-wider">
-                  Catálogo · Campus Guácimo
+                  Catálogo · Guácimo
                 </span>
               </div>
             </Link>
@@ -143,7 +143,7 @@ export default function Navbar() {
 
             {/* Conteo de resultados visible solo en la barra, en sm+ */}
             <span className="hidden sm:block text-xs text-earth-400 pl-1 flex-shrink-0">
-              Universidad EARTH · Campus Guácimo, Limón
+              Entomósfera · Guácimo, Limón
             </span>
           </div>
         </div>
