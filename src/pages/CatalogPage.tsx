@@ -6,10 +6,10 @@ import SpecimenGrid from '../components/insects/SpecimenGrid';
 import SpecimenModal from '../components/insects/SpecimenModal';
 
 const TYPE_HERO: Record<string, { title: string; subtitle: string }> = {
-  '':       { title: 'Biodiversidad del Campus',   subtitle: 'Explora todos los especímenes registrados en el campus de la Universidad EARTH' },
-  insect:   { title: 'Insectos del Campus',         subtitle: 'Abejas, mariposas, escarabajos y más — los polinizadores y controladores de nuestro ecosistema' },
-  pest:     { title: 'Plagas Identificadas',        subtitle: 'Especies con impacto negativo en cultivos y ecosistemas del campus — monitoreo activo' },
-  plant:    { title: 'Flora del Campus',            subtitle: 'Plantas hospederas, medicinales y estructurantes de los ecosistemas de EARTH' },
+  '':       { title: 'Biodiversidad de Guácimo',   subtitle: 'Explora todos los especímenes registrados en la zona' },
+  insect:   { title: 'Insectos',         subtitle: 'Abejas, mariposas, escarabajos y más — los polinizadores y controladores de nuestro ecosistema' },
+  pest:     { title: 'Plagas Identificadas',        subtitle: 'Especies con impacto negativo en cultivos y ecosistemas — monitoreo activo' },
+  plant:    { title: 'Flora de la zona',            subtitle: 'Plantas hospederas, medicinales y estructurantes de los ecosistemas' },
 };
 
 export default function CatalogPage() {
